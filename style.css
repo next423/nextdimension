@@ -1,133 +1,97 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
 body
 {
-	margin: 0;
-	padding: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	background: #060c21;
-	font-family: 'Poppins',sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #031321;
+    font-family: 'Courier New', Courier, monospace;
 }
-.container
+a
 {
-	position: relative;
-	width: 90%;
-	display: grid;
-	grid-template-columns: repeat(auto-fill,minmax(260px, 1fr));
-	grid-template-rows: auto;
-	grid-gap: 0 40px;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #2196f3;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+    letter-spacing: 4px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0005);
 }
-.container .box
+a:hover
 {
-	position: relative;
-	height: 400px;
-	background: #060c21;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border: 1px solid #000;
+    color: #255784;
+    background: #2196f3;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+    transition-delay:1s;
+
+    
 
 }
-.container .box:before
+a span
 {
-	content:'';
-	position: absolute;
-	top: -2px;
-	left: -2px;
-	right: -2px;
-	bottom: -2px;
-	background: #fff;
-	transform: skew(2deg,2deg);
-	z-index: -1;
-}
-.container .box:nth-child(1):before
-{
-	background: linear-gradient(315deg,#ff0057,#e64a19);
-}
-.container .box:nth-child(2):before
-{
-	background: linear-gradient(315deg,#89ff00,#00bcd4);
-}.container .box:nth-child(3):before
-{
-	background: linear-gradient(315deg,#e91e63,#5d02ff);
-}.container .box:nth-child(4):before
-{
-	background: linear-gradient(315deg,#ff0000,#ffc107);
-}
-.container .box:after
-{
- content: '';
- position: absolute;
- top: 0;
- left:0;
- width: 50%;
- height: 100%;
- background: rgba(255,255,255,0.05);
- pointer-events: none;
-}
-.content
-{
-	position: relative;
-	padding: 20px;
-	transform: translateY(40px);
-}
-.box .content h2
-{
-	position: absolute;
-	top: -60px;
-	right: 20px;
-	margin: 0;
-	padding: 0;
-	font-size: 10em;
-	color: rgba(255,255,255,.05);
-	transition: 0.5s;
+    position: absolute;
+    display: block;
 
 }
-.box:hover .content h2
+a span:nth-child(1)
 {
-top: -140px;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#2196f3);
 }
-.box .content h3
+a:hover span:nth-child(1)
 {
-	margin: 0 0 10px;
-	padding: 0;
-	font-size: 24px;
-	font-weight: 500;
-	color: #fff;
-
+    left: 100%;
+    transition: 1s;
 }
-.box .content p
+a span:nth-child(3)
 {
-	margin: 0;
-	padding: 0;
-	color: #fff;
-	font-size: 16px;
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#2196f3);
 }
-.box .content a
+a:hover span:nth-child(3)
 {
-	position: relative;
-	margin: 20px 0 0;
-	padding: 10px 20px;
-	text-decoration: none;
-	border: 1px solid #fff;
-	display: inline-block;
-	color: #fff;
-	transition: 0.5s;
-	transform: translateY(-40px);
-	opacity: 0;
-	visibility: hidden;
-
+    right: 100%;
+    transition: 1s;
+    transition-delay:0.5s ;
 }
-.box:hover .content a
+a span:nth-child(2)
 {
-	transform: translateY(0);
-	opacity: 1;
-	visibility: visible;
+    top: -100%;
+    right: 0%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#2196f3);
 }
-.box .content a:hover
+a:hover span:nth-child(2)
 {
-	color: #000;
-	background:#fff;
+    top: 100%;
+    transition: 1s;
+    transition-delay:0.25s ;
+}
+a span:nth-child(4)
+{
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#2196f3);
+}
+a:hover span:nth-child(4)
+{
+    bottom: 100%;
+    transition: 1s;
+    transition-delay:0.75s ;
 }
